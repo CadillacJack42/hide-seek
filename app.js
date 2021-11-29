@@ -34,7 +34,6 @@ function handleGuess(userGuess, correctSpot) {
     totalGuesses++;
     // then grab the appropriate container element for the correct guess from the DOM
     let correctGuess = document.getElementById(`${correctSpot}-container`);
-    console.log(correctGuess);
     // then add the face class to that element so that the face shows up
     correctGuess.classList.add('face');
     // then if the user guess is correct, increment the correct guesses
