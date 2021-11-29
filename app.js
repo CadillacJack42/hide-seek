@@ -29,12 +29,11 @@ function getRandomItem(arr) {
 
 function handleGuess(userGuess, correctSpot) {
     // should reset the styles
-    resetStyles();
+        //See Below. Using setTimeout()
     // then increment the guesses
     totalGuesses++;
     // then grab the appropriate container element for the correct guess from the DOM
     let correctGuess = document.getElementById(`${correctSpot}-container`);
-    console.log(correctGuess);
     // then add the face class to that element so that the face shows up
     correctGuess.classList.add('face');
     // then if the user guess is correct, increment the correct guesses
@@ -48,13 +47,6 @@ function handleGuess(userGuess, correctSpot) {
     setTimeout(function(){    
         correctGuess.classList.remove('face');
     }, 1000);
-}
-
-function resetStyles() {
-    // should remove the face class from all containers
-    shedContainer.classList.remove('face');
-    treeContainer.classList.remove('face');
-    boulderContainer.classList.remove('face');
 }
 
 shedButton.addEventListener('click', () => {
