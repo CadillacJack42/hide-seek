@@ -3,10 +3,6 @@ const shedButton = document.getElementById('shed-button');
 const treeButton = document.getElementById('tree-button');
 const boulderButton = document.getElementById('boulder-button');
 
-const shedContainer = document.getElementById('shed-container');
-const treeContainer = document.getElementById('tree-container');
-const boulderContainer = document.getElementById('boulder-container');
-
 const totalEl = document.getElementById('total');
 const winsEl = document.getElementById('wins');
 const lossEl = document.getElementById('losses');
@@ -23,7 +19,6 @@ let totalGuesses = 0;
 
 function getRandomItem(arr) {
     const index = Math.floor(Math.random() * arr.length);
-
     return arr[index];
 }
 
